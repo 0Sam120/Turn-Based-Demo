@@ -205,7 +205,18 @@ public class TurnManager : MonoBehaviour
         {
             state = GameState.CombatEnd;
             combatLog.LogBattleEnd(PlayerTeam.Count > 0 ? "Player" : "Enemy");
+
+            EndCombat(PlayerTeam.Count > 0 ? "Player" : "Enemy");
         }
+    }
+
+    private void EndCombat(string winner)
+    {
+        // Force end any current turn
+        ForceEndTurn();
+
+        // Calculate and show results
+        ShowResultScreen(winner);
     }
 
     private void ForceEndTurn()
@@ -220,6 +231,7 @@ public class TurnManager : MonoBehaviour
         }
 
         clear.FullClear();
+        combatLog.logPanel.SetActive(false);
         commandMenu.ClosePanel();
     }
 
@@ -229,6 +241,9 @@ public class TurnManager : MonoBehaviour
         // Setup UI
         resultScreen.SetActive(true);
         resultTitle.text = winner == "Player" ? "VICTORY!" : "DEFEAT";
+
+        scoreText.text = $"Units remaining: {PlayerTeam.Count}";
+        rankText.text = $"Total Rounds: {combatRound}";
 
         // Setup buttons
         restartButton.onClick.RemoveAllListeners();

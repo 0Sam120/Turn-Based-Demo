@@ -60,7 +60,7 @@ public class AIManager : MonoBehaviour
                 break;
 
             case AIState.SeekingCover:
-                SeekCover();
+                MoveToPosition();
                 break;
 
             case AIState.Attacking:
