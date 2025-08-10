@@ -1,0 +1,82 @@
+{
+    "name": "MouseInput",
+    "maps": [
+        {
+            "name": "UnitCommand",
+            "id": "e0dde56f-785f-42b8-91eb-1b22321cc6c6",
+            "actions": [
+                {
+                    "name": "ConfirmAction",
+                    "type": "Button",
+                    "id": "d4ff2ac4-11d7-4272-954f-df3c2d8f2624",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "75c6f059-8b8c-4a9d-b4a8-a2d7589c6245",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ConfirmAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UnitControl",
+            "id": "9b6beab9-184d-44d5-a63a-05fc5904e614",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "d6a63dad-8a9a-48aa-91b8-ccde7cc26618",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Deselect",
+                    "type": "Button",
+                    "id": "4bd5ba24-63ea-4ac8-91e3-1897c4c381e6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8982f382-7c97-4d71-a882-7925b16b5a72",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "667e1cf8-c21f-47c5-800c-e26ee5c9d2ab",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Deselect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
